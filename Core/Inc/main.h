@@ -31,7 +31,11 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "usbd_core.h"
+#include "usbd_desc.h"
+#include "usbd_cdc_rndis.h"
+#include "usbd_cdc_rndis_if.h"
+#include "lwip/netif.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -41,7 +45,8 @@ extern "C" {
 
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
-
+#define LED_TIMER_LONG                        0x3FFFCU
+#define LED_TIMER_SHORT             (LED_TIMER_LONG/2U)
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/

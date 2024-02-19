@@ -17,12 +17,11 @@
   */
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f7xx_hal.h"
+#include "stm32u5xx_hal.h"
 #include "lwip/timeouts.h"
 #include "netif/etharp.h"
 #include "ethernetif.h"
 #include "usbd_cdc_rndis_if.h"
-#include "stm32746g_discovery.h"
 #include <string.h>
 
 /* Private typedef -----------------------------------------------------------*/
@@ -273,11 +272,11 @@ void ethernetif_update_config(struct netif *netif)
 
   if(netif_is_link_up(netif) == 1U)
   {
-    BSP_LED_On(LED1);
+//    BSP_LED_On(LED1);
   }
   else
   {
-    BSP_LED_Off(LED1);
+//    BSP_LED_Off(LED1);
   }
 
   ethernetif_notify_conn_changed(netif);

@@ -44,7 +44,9 @@
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
 /* USER CODE BEGIN PV */
-
+USBD_HandleTypeDef        USBD_Device;
+struct netif              gnetif;
+__IO uint32_t LEDTimer =  LED_TIMER_LONG;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

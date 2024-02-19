@@ -90,13 +90,15 @@ const char * LEDS_CGI_Handler(int iIndex, int iNumParams, char *pcParam[], char 
 }
 
 /**** SSI handler ****/
-
+uint32_t swButton=0;
 u16_t mySSIHandler(int iIndex, char *pcInsert, int iInsertLen)
 {
   /* We have only one SSI handler iIndex = 0 */
   if (iIndex == 0)
   {
-    if (BSP_PB_GetState(BUTTON_TAMPER) == 1U)
+//    if (BSP_PB_GetState(BUTTON_TAMPER) == 1U)
+    if (swButton == 1U)
+
     {
       char myStr1[] = " BUTTON PRESSED"; /* string to be displayed on web page */
 

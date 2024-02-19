@@ -52,6 +52,8 @@
 									<listOptionValue builtIn="false" value="../Middleware/ST/STM32_USB_Device_Library/Core/Inc"/>
 									<listOptionValue builtIn="false" value="../Middleware/ST/STM32_USB_Device_Library/Class/CDC_RNDIS/Inc"/>
 									<listOptionValue builtIn="false" value="../Middleware/Third_Party/LwIP/src/include"/>
+									<listOptionValue builtIn="false" value="../Middleware/Third_Party/LwIP/system"/>
+									<listOptionValue builtIn="false" value="../Middleware/Third_Party/LwIP/src/apps/http"/>
 									<listOptionValue builtIn="false" value="../LwIP/App"/>
 									<listOptionValue builtIn="false" value="../LwIP/Target"/>
 									<listOptionValue builtIn="false" value="../USB_Device/App"/>
@@ -81,9 +83,15 @@
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.411889020" name="MCU Output Converter Motorola S-rec with symbols" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec"/>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.104043206.1299203991" name="fsdata_custom.c" rcbsApplicability="disable" resourcePath="LwIP/App/fsdata_custom.c" toolsToInvoke="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1299846491.495044492">
+						<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1299846491.495044492" name="MCU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1299846491"/>
+					</fileInfo>
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
+						<entry excluding="App/fsdata_custom.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="LwIP"/>
+						<entry excluding="Third_Party/LwIP/doc|Third_Party/LwIP/src/apps/http/makefsdata|Third_Party/LwIP/src/apps/http/fs|Third_Party/LwIP/test" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middleware"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="USB_Device"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
