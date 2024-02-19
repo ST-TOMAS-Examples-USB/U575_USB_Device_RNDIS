@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "usb_device.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -89,10 +89,11 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_USB_OTG_FS_PCD_Init();
+  // MX_USB_OTG_FS_PCD_Init();
   MX_ICACHE_Init();
   /* USER CODE BEGIN 2 */
-
+  /* Initialize all configured peripherals */
+  MX_USB_Device_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -102,6 +103,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+        /* Background process of CDC_RNDIS class */
+    USBD_CDC_RNDIS_fops.Process(&USBD_Device);
   }
   /* USER CODE END 3 */
 }
